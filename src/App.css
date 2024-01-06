@@ -471,7 +471,7 @@ height: 200%;
 #siteLogo {
 display: block;
 margin: 0 auto; /* Centers the logo */
-max-width: 190px; /* Adjust the size as needed */
+max-width: 140px; /* Adjust the size as needed */
 height: auto; /* Maintain aspect ratio */
 padding-top: 25px; /* Space from the top, adjust as needed */
 }
@@ -494,7 +494,7 @@ font-size: 20px;
 #tweetButton {
 margin-top: 20px;
 width: 150px; /* Adjust width as needed */
-    font-size: 16px;
+    font-size: 14px;
 }
 #finalMessage {
 font-family: 'Orbitron', sans-serif;
@@ -521,4 +521,21 @@ font-size: 12px;
 text-transform: uppercase;
 font-weight: bold;
 }
+}
+
+@media (max-width: 200px) {
+.footer-right .social-icon:last-child {
+margin-right: 5px; /* Adds margin to the right of the last social icon */
+}
+.footer-right {
+display: flex;
+align-items: center;
+justify-content: flex-end;
+}
+.social-icon {
+fill: #ffffff; /* Sets the color of the SVG to white */
+height: 10px; /* Adjust the size as needed */
+margin: 0 5px;
+}
+
 }
