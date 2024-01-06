@@ -25,7 +25,7 @@ position: relative; /* Needed for absolute positioning of the pseudo-element */
 
 
 button {
-background-color: #0f0f2f8a; /* Vaporwave pink */
+background-color: #0f0f2fb3; /* Vaporwave pink */
 color: #ffffff; /* White text */
 padding: 10px 20px; /* Smaller padding */
 margin: 5px; /* Smaller margin */
@@ -188,8 +188,8 @@ font-weight: bold;
 }
 
 #copyButton:hover {
-background-color: #357ABD; /* Slightly darker color on hover */
-box-shadow: 0px 0px 15px rgba(53, 122, 189, 0.8); /* Increased glow effect on hover */
+background-color: #ff49db; /* Slightly darker pink on hover */
+box-shadow: 0px 0px 15px rgba(255, 73, 219, 0.8); /* Increased glow effect on hover */
 cursor: url('foundercrying.png'), auto;
 
 }
@@ -209,8 +209,8 @@ font-weight: bold;
 }
 
 #tweetButton:hover {
-background-color: #357ABD; /* Slightly darker color on hover */
-box-shadow: 0px 0px 15px rgba(53, 122, 189, 0.8); /* Increased glow effect on hover */
+background-color: #ff49db; /* Slightly darker pink on hover */
+box-shadow: 0px 0px 15px rgba(255, 73, 219, 0.8); /* Increased glow effect on hover */
 cursor: url('foundercrying.png'), auto;
 
 }
@@ -261,12 +261,11 @@ footer {
 }
 
 #backButton {
-/* Style it similar to other buttons */
-background-color: #4A90E2; /* Different color for distinction */
-color: #ffffff;
+    background-color: #0f0f2fb3; /* Vaporwave pink */
+color: #ffffff; /* White text */
 padding: 10px 20px;
 margin: 10px auto;
-margin-top: 30px;
+margin-top: 20px;
 border: none;
 border-radius: 30px;
 box-shadow: 0px 4px 6px rgba(74, 144, 226, 0.4);
@@ -278,8 +277,8 @@ font-weight: bold;
 }
 
 #backButton:hover {
-background-color: #357ABD;
-box-shadow: 0px 0px 15px rgba(53, 122, 189, 0.8);
+background-color: #ff49db; /* Slightly darker pink on hover */
+box-shadow: 0px 0px 15px rgba(255, 73, 219, 0.8); /* Increased glow effect on hover */
 cursor: url('foundercrying.png'), auto;
 
 }
@@ -515,7 +514,7 @@ max-width: 1000px;
 line-height: 1.75; /* Optional: Adjust line height for better readability */
 }
 #backButton {
-margin-top: 15px;
+margin-top: 5px;
 border: none;
 font-size: 12px;
 text-transform: uppercase;
