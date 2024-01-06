@@ -349,7 +349,7 @@ animation: glowingBorder 3s linear infinite;
 #siteLogo {
 display: block;
 margin: 0 auto; /* Centers the logo */
-max-width: 300px; /* Adjust the size as needed */
+max-width: 220px; /* Adjust the size as needed */
 height: auto; /* Maintain aspect ratio */
 padding-top: 50px; /* Space from the top, adjust as needed */
 }
