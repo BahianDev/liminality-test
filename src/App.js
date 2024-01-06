@@ -285,7 +285,7 @@ return (
         <a href="https://t.me/bollywoodonsol">
           <img src="telegram.svg" alt="Telegram" className="social-icon" />
         </a>
-        {/* Additional social media links here */}
+        {/* Additional social media links hereeeeeeeee */}
       </div>
 	    <div className="footer-text">CPxE3TB2fjoxf3ip2DkepUMje8eCAucHHavS17g3VER1 - 2024 $BOLLY 
   </div> 
