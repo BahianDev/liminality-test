@@ -83,8 +83,10 @@ background-color: #7f00ff; /* Vaporwave purple for selected buttons */
 box-shadow: 0px 0px 15px rgba(127, 0, 255, 0.8); /* Purple glow to indicate selection */
 }
 #instructionText, #finalMessage {
-margin-bottom: 30px;
+font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
 font-size: 16px; /* Smaller font size */
+    text-transform: uppercase;
 width: 100%;
 margin-left: auto;
 margin-right: auto;
@@ -213,6 +215,7 @@ cursor: url('foundercrying.png'), auto;
 }
 
 #controlButtons, #messageDisplay, #instructionText {
+font-family: 'Orbitron', sans-serif;
 width: 100%; /* Ensure full width within flex container */
 display: flex;
 flex-direction: column;
@@ -281,14 +284,15 @@ cursor: url('foundercrying.png'), auto;
 }
 #instructionText {
 color: #ffffff; /* White color for better visibility */
+    font-family: 'Orbitron', sans-serif;
 background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
 padding: 10px;
 border-radius: 10px;
-font-size: 18px;
+font-size: 14px;
 text-align: center;
-width: 80%;
+width: 100%;
 max-width: 700px;
-margin: 20px auto; /* Centering the text block */
+margin: 1px auto; /* Centering the text block */
 box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Adding a subtle shadow for depth */
 }
 .footer-left, .footer-right {
@@ -340,11 +344,11 @@ to {
 animation: glowingBorder 3s linear infinite;
 }
 #siteLogo {
-    display: block;
-    height: auto;
-    margin: 0 auto;
-    max-width: 150px;
-    padding-top: 25px;
+display: block;
+margin: 0 auto; /* Centers the logo */
+max-width: 220px; /* Adjust the size as needed */
+height: auto; /* Maintain aspect ratio */
+padding-top: 50px; /* Space from the top, adjust as needed */
 }
 
 
@@ -461,5 +465,15 @@ top: 50%;
 left: 50%;
 width: 200%;
 height: 200%;
+}
+#siteLogo {
+display: block;
+margin: 0 auto; /* Centers the logo */
+max-width: 190px; /* Adjust the size as needed */
+height: auto; /* Maintain aspect ratio */
+padding-top: 25px; /* Space from the top, adjust as needed */
+}
+#instructionText {
+    margin-bottom: 15px; /* Bottom margin, adjust to footer's height */
 }
 }
