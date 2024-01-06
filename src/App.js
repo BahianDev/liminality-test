@@ -1,6 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
+import {HelioCheckout} from '@heliofi/checkout-react'
+
+const helioConfig = {
+    paylinkId: "65989cfda8206148c75c5efb",
+    display: "button",
+    onSuccess: event => console.log(event),
+    onError: event => console.log(event),
+    onPending: event => console.log(event),
+    onCancel: () => console.log("Cancelled payment"),
+    onStartPayment: () => console.log("Starting payment"),
+};
+
+function YourCheckoutComponent() {
+  return <HelioCheckout config={helioConfig} />;
+}
+      
 function App() {
   const [selectedMessageKeys, setSelectedMessageKeys] = useState(new Set());
   const [finalMessage, setFinalMessage] = useState('');
@@ -224,6 +240,9 @@ return (
 	  <div id="controlButtons">
 		<button id="randomizeButton" onClick={randomize}>Randomize</button>
 		<button id="nextButton" onClick={next}>Next</button>
+		
+		        <YourCheckoutComponent />
+
 	  </div>
 	)}
 
@@ -238,7 +257,10 @@ return (
 	        {/* Final Message Display */}
       {showFinalMessage && (
         <div id="finalMessage">
-		          <button id="tweetButton" onClick={tweetApology}>X Post Apology</button>
+		<button id="tweetButton" onClick={tweetApology}>
+    <img src="x.svg" alt="Twitter" /> Post Apology
+</button>
+
           <button id="copyButton" onClick={copyToClipboard}>Copy</button>
           <button id="backButton" onClick={goBack}>Back</button>
         </div>
@@ -265,7 +287,7 @@ return (
         </a>
         {/* Additional social media links here */}
       </div>
-	    <div className="footer-text">CPxE3TB2fjoxf3ip2DkepUMje8eCAucHHavS17g3VER1 - 2024 $BOLLY
+	    <div className="footer-text">CPxE3TB2fjoxf3ip2DkepUMje8eCAucHHavS17g3VER1 - 2024 $BOLLY 
   </div> 
     </footer>
   </div>
