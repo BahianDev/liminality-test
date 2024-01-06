@@ -21,14 +21,7 @@ position: relative; /* Needed for absolute positioning of the pseudo-element */
 
 }
 
-@media (max-height: 1080px) {
-body {
-    /* Adjust styles for 1080p screens here */
-    background-size: cover; /* Adjust background size for better fit */
-    font-size: 14px; /* Decrease font size for better readability */
-    /* Add any other necessary style adjustments */
-}
-}
+
 
 
 button {
@@ -436,4 +429,19 @@ height: 20px; /* Adjust as needed */
 width: 20px; /* Adjust as needed */
 margin-right: 5px; /* Spacing between icon and text */
 vertical-align: middle; /* Align icon with text */
+}
+
+@media (max-height: 1080px) {
+body {
+    /* Adjust styles for 1080p screens here */
+    background-size: cover; /* Adjust background size for better fit */
+    font-size: 12px; /* Decrease font size for better readability */
+    /* Add any other necessary style adjustments */
+}
+button {
+padding: 5px 10px; /* Smaller padding */
+margin: 5px; /* Smaller margin */
+border-radius: 5px; /* Smoother border radius */
+font-size: 12px; /* Smaller font size */
+}
 }
