@@ -133,6 +133,7 @@ font-size: 14px;
 #startButton
 {
 font-size: 26px;
+
 }
 #tweetButton {
 margin-top: 60px;
@@ -172,7 +173,7 @@ flex: 1; /* Makes each button expand to fill the available space */
 }
 
 #copyButton {
-background-color: #4A90E2; /* A different color for the copy button */
+background-color: #7f00ff; /* A different color for the copy button */
 color: #ffffff;
 padding: 10px 20px;
 margin: 10px auto;
@@ -193,7 +194,7 @@ cursor: url('foundercrying.png'), auto;
 
 }
 #tweetButton {
-background-color: #4A90E2; /* A different color for the copy button */
+background-color: #7f00ff; /* A different color for the copy button */
 color: #ffffff;
 padding: 10px 20px;
 margin: 10px auto;
@@ -265,7 +266,7 @@ background-color: #4A90E2; /* Different color for distinction */
 color: #ffffff;
 padding: 10px 20px;
 margin: 10px auto;
-margin-top: 50px;
+margin-top: 30px;
 border: none;
 border-radius: 30px;
 box-shadow: 0px 4px 6px rgba(74, 144, 226, 0.4);
@@ -477,5 +478,47 @@ padding-top: 25px; /* Space from the top, adjust as needed */
 #instructionText {
     margin-bottom: 15px; /* Bottom margin, adjust to footer's height */
     font-size: 12px;
+}
+#nextButton {
+font-size: 16px;
+
+}
+#controlButtons {
+font-size: 20px;
+
+}
+#startButton
+{
+font-size: 20px;
+}
+#tweetButton {
+margin-top: 20px;
+width: 150px; /* Adjust width as needed */
+    font-size: 16px;
+}
+#finalMessage {
+font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+font-size: 14px; /* Smaller font size */
+    text-transform: uppercase;
+}
+#finalMessage p {
+margin-bottom: 16px; /* Increase space below each paragraph */
+line-height: 1; /* Optional: Adjust line height for better readability */
+/* Add other styles if needed */
+}
+#messageDisplay {
+padding: 15px;
+margin: 5px auto;
+width: 90%;
+max-width: 1000px;
+line-height: 1.75; /* Optional: Adjust line height for better readability */
+}
+#backButton {
+margin-top: 15px;
+border: none;
+font-size: 12px;
+text-transform: uppercase;
+font-weight: bold;
 }
 }
