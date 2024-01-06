@@ -444,4 +444,22 @@ margin: 5px; /* Smaller margin */
 border-radius: 5px; /* Smoother border radius */
 font-size: 12px; /* Smaller font size */
 }
+#tweetButton {
+font-size: 20px;
+}
+#randomizeButton {
+
+padding: 5px 10px; /* Generous padding for a larger button */
+margin: 5px;
+border: none;
+border-radius: 10px; /* Rounded corners */
+font-size: 14px; /* Larger font size for impact */
+}
+
+#randomizeButton::before {
+top: 50%;
+left: 50%;
+width: 200%;
+height: 200%;
+}
 }
