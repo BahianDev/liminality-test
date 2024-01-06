@@ -24,7 +24,7 @@ position: relative; /* Needed for absolute positioning of the pseudo-element */
 @media (max-height: 1080px) {
 body {
     /* Adjust styles for 1080p screens here */
-    background-size: contain; /* Adjust background size for better fit */
+    background-size: cover; /* Adjust background size for better fit */
     font-size: 14px; /* Decrease font size for better readability */
     /* Add any other necessary style adjustments */
 }
