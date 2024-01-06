@@ -153,7 +153,7 @@ const messages = {
 			"It's time for a candid reflection. This journey has been both rewarding and demanding, testing our limits and forcing us to adapt in unexpected ways."
 		];
 		const outros = [
-			"Giving back the rest of the treasury would not make a difference. Thank you to everyone for your support. Despite these challenges, I'm proud of our resilience and what we've managed to achieve. 😢",
+			" Giving back the rest of the treasury would not make a difference. Thank you to everyone for your support. Despite these challenges, I'm proud of our resilience and what we've managed to achieve. 😢",
 			"In the end, our efforts have brought us to a crucial point. Your support has been invaluable, and I stand by the progress we've made together. 🙏",
 			"As we look forward, let's not forget the lessons learned. I appreciate every bit of support and faith you've placed in us. Together, we've weathered the storm. 💪"
 		];
@@ -162,7 +162,7 @@ const messages = {
 		const outro = outros[Math.floor(Math.random() * outros.length)];
 		const selectedMessages = Array.from(selectedMessageKeys).map(key => messages[key].message);
 
-		const fullMessage = [intro, ...selectedMessages, outro].join('\n');
+		const fullMessage = [intro, ...selectedMessages, outro].join('');
 		setFinalMessage(fullMessage);
 		setShowFinalMessage(true);
 	  };
@@ -247,7 +247,7 @@ return (
 	)}
 
 
-      {/* Final Message Display */}
+   {/* Final Message Display */}
       {showFinalMessage && (
         <div id="messageDisplay">
           <p id="finalMessage">{finalMessage}</p>
@@ -285,7 +285,7 @@ return (
         <a href="https://t.me/bollywoodonsol">
           <img src="telegram.svg" alt="Telegram" className="social-icon" />
         </a>
-        {/* Additional social media links hereeeeeeeee */}
+        {/* Additional social media links here */}
       </div>
 	    <div className="footer-text">CPxE3TB2fjoxf3ip2DkepUMje8eCAucHHavS17g3VER1 - 2024 $BOLLY 
   </div> 
