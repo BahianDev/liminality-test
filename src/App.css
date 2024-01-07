@@ -1,548 +1,529 @@
-html, body {
-    height: 100%;
-    margin: 0;
+html,
+body {
+  height: 100%;
+  margin: 0;
 }
 body {
-font-family: 'Orbitron', sans-serif;
-background-image: url('app3.png');
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-background-attachment: fixed;
-color: #ffffff;
-cursor: url('foundercrying.png'), auto;
-text-align: center;
-margin: 0;
-padding: 0;
-justify-content: center; /* Center content vertically */
-align-items: center; /* Center content horizontally */
-min-height: 100vh; /* Full viewport height */
-position: relative; /* Needed for absolute positioning of the pseudo-element */
-
+  font-family: "Orbitron", sans-serif;
+  background-image: url("app3.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #ffffff;
+  cursor: url("foundercrying.png"), auto;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  min-height: 100vh; /* Full viewport height */
+  position: relative; /* Needed for absolute positioning of the pseudo-element */
 }
-
-
-
 
 button {
-background-color: #0f0f2fb3; /* Vaporwave pink */
-color: #ffffff; /* White text */
-padding: 10px 20px; /* Smaller padding */
-margin: 5px; /* Smaller margin */
-border: none;
-border-radius: 5px; /* Smoother border radius */
-cursor: pointer;
-box-shadow: 0px 4px 6px rgba(255, 119, 233, 0.4); /* Pink glow effect */
-transition: all 0.3s ease;
-font-size: 14px; /* Smaller font size */
-text-transform: uppercase;
-font-weight: bold;
-animation: buttonGlow 1s infinite alternate; /* New animation */
+  background-color: #0f0f2fb3; /* Vaporwave pink */
+  color: #ffffff; /* White text */
+  padding: 10px 20px; /* Smaller padding */
+  margin: 5px; /* Smaller margin */
+  border: none;
+  border-radius: 5px; /* Smoother border radius */
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(255, 119, 233, 0.4); /* Pink glow effect */
+  transition: all 0.3s ease;
+  font-size: 14px; /* Smaller font size */
+  text-transform: uppercase;
+  font-weight: bold;
+  animation: buttonGlow 1s infinite alternate; /* New animation */
 }
-
 
 @media (max-height: 1080px) {
-button {
+  button {
     padding: 5px 10px; /* Smaller padding */
     font-size: 10px; /* Decrease font size for better readability */
     /* Add any other necessary style adjustments */
-}
+  }
 }
 
 @keyframes buttonGlow {
-0% {
+  0% {
     box-shadow: 0px 4px 6px rgba(255, 119, 233, 0.4);
-}
-100% {
+  }
+  100% {
     box-shadow: 0px 4px 10px rgba(255, 73, 219, 0.8);
+  }
 }
-}
-
 
 button:hover {
-background-color: #ff49db; /* Slightly darker pink on hover */
-box-shadow: 0px 0px 15px rgba(255, 73, 219, 0.8); /* Increased glow effect on hover */
-transform: translateY(-2px);
-cursor: url('foundercrying.png'), auto;
-
+  background-color: #ff49db; /* Slightly darker pink on hover */
+  box-shadow: 0px 0px 15px rgba(255, 73, 219, 0.8); /* Increased glow effect on hover */
+  transform: translateY(-2px);
+  cursor: url("foundercrying.png"), auto;
 }
 
 button:disabled {
-background-color: #5e5e5e;
-color: #a3a3a3;
-cursor: default;
-transform: none;
-box-shadow: none;
+  background-color: #5e5e5e;
+  color: #a3a3a3;
+  cursor: default;
+  transform: none;
+  box-shadow: none;
 }
 
-#buttons button, #randomizeButton, #tweetButton {
-width: 200px;
+#buttons button,
+#randomizeButton,
+#tweetButton {
+  width: 200px;
 }
 #buttons button.selected {
-background-color: #7f00ff; /* Vaporwave purple for selected buttons */
-box-shadow: 0px 0px 15px rgba(127, 0, 255, 0.8); /* Purple glow to indicate selection */
+  background-color: #7f00ff; /* Vaporwave purple for selected buttons */
+  box-shadow: 0px 0px 15px rgba(127, 0, 255, 0.8); /* Purple glow to indicate selection */
 }
-#instructionText{
-font-family: 'Orbitron', sans-serif;
-    font-weight: bold;
-font-size: 16px; /* Smaller font size */
-    text-transform: uppercase;
-width: 100%;
-margin-left: auto;
-margin-right: auto;
+#instructionText {
+  font-family: "Orbitron", sans-serif;
+  font-weight: bold;
+  font-size: 16px; /* Smaller font size */
+  text-transform: uppercase;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #finalMessage {
-font-family: 'Orbitron', sans-serif;
-    font-weight: bold;
-font-size: 16px; /* Smaller font size */
-width: 100%;
-margin-left: auto;
-margin-right: auto;
+  font-family: "Orbitron", sans-serif;
+  font-weight: bold;
+  font-size: 16px; /* Smaller font size */
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 #finalMessage p {
-margin-bottom: 20px; /* Increase space below each paragraph */
-line-height: 1.5; /* Optional: Adjust line height for better readability */
-/* Add other styles if needed */
+  margin-bottom: 20px; /* Increase space below each paragraph */
+  line-height: 1.5; /* Optional: Adjust line height for better readability */
+  /* Add other styles if needed */
 }
 #messageDisplay {
-background-color: #0f0f2f; /* Dark vaporwave color for message box */
-color: #ffffff; /* White text color */
-border-radius: 15px;
-padding: 30px;
-box-shadow: 0 8px 16px rgba(0, 0, 47, 0.2);
-margin: 20px auto;
-width: 80%;
-max-width: 1000px;
-transition: box-shadow 0.3s ease;
-border: 2px solid #ff77e9; /* Pink border around the message box */
-line-height: 2; /* Optional: Adjust line height for better readability */
+  background-color: #0f0f2f; /* Dark vaporwave color for message box */
+  color: #ffffff; /* White text color */
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 47, 0.2);
+  margin: 20px auto;
+  width: 80%;
+  max-width: 1000px;
+  transition: box-shadow 0.3s ease;
+  border: 2px solid #ff77e9; /* Pink border around the message box */
+  line-height: 2; /* Optional: Adjust line height for better readability */
 }
 
 #messageDisplay:hover {
-box-shadow: 0 12px 20px rgba(0, 0, 47, 0.3);
-cursor: url('foundercrying.png'), auto;
-
+  box-shadow: 0 12px 20px rgba(0, 0, 47, 0.3);
+  cursor: url("foundercrying.png"), auto;
 }
 
 #selectionButtons {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-gap: 10px;
-justify-content: center;
-padding: 20px;
-font-size: 14px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  justify-content: center;
+  padding: 20px;
+  font-size: 14px;
 }
 
-
-
-
-
-
-#startButton
-{
-font-size: 26px;
-
+#startButton {
+  font-size: 26px;
 }
 #tweetButton {
-margin-top: 60px;
-width: 200px; /* Adjust width as needed */
-display: block; /* Make tweet button a block element to center it */
-margin-left: auto;
-margin-right: auto;
-    font-size: 26px;
-
+  margin-top: 60px;
+  width: 200px; /* Adjust width as needed */
+  display: block; /* Make tweet button a block element to center it */
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 26px;
 }
 #randomizeButton {
-font-size: 26px;
-
+  font-size: 26px;
 }
 
 #controlButtons {
-gap: 10px;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-font-size: 26px;
-
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
 }
 #nextButton {
-font-size: 26px;
-
+  font-size: 26px;
 }
 #controlButtons {
-display: flex;
-justify-content: space-between; /* This spreads out the buttons across the container */
-width: 100%; /* Ensures the container spans the full width */
-margin-top: 60px; /* Adds space above the control buttons */
+  display: flex;
+  justify-content: space-between; /* This spreads out the buttons across the container */
+  width: 100%; /* Ensures the container spans the full width */
+  margin-top: 60px; /* Adds space above the control buttons */
 }
 
 #controlButtons button {
-flex: 1; /* Makes each button expand to fill the available space */
+  flex: 1; /* Makes each button expand to fill the available space */
 }
 
 #copyButton {
-background-color: #7f00ff; /* A different color for the copy button */
-color: #ffffff;
-padding: 10px 20px;
-margin: 10px auto;
-border: none;
-border-radius: 30px;
-box-shadow: 0px 4px 6px rgba(74, 144, 226, 0.4); /* Matching glow effect */
-transition: all 0.3s ease;
-display: block; /* Center the button */
-font-size: 12px;
-text-transform: uppercase;
-font-weight: bold;
+  background-color: #7f00ff; /* A different color for the copy button */
+  color: #ffffff;
+  padding: 10px 20px;
+  margin: 10px auto;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0px 4px 6px rgba(74, 144, 226, 0.4); /* Matching glow effect */
+  transition: all 0.3s ease;
+  display: block; /* Center the button */
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 #copyButton:hover {
-background-color: #ff49db; /* Slightly darker pink on hover */
-box-shadow: 0px 0px 15px rgba(255, 73, 219, 0.8); /* Increased glow effect on hover */
-cursor: url('foundercrying.png'), auto;
-
+  background-color: #ff49db; /* Slightly darker pink on hover */
+  box-shadow: 0px 0px 15px rgba(255, 73, 219, 0.8); /* Increased glow effect on hover */
+  cursor: url("foundercrying.png"), auto;
 }
 #tweetButton {
-background-color: #7f00ff; /* A different color for the copy button */
-color: #ffffff;
-padding: 10px 20px;
-margin: 10px auto;
-border: none;
-border-radius: 30px;
-box-shadow: 0px 4px 6px rgba(74, 144, 226, 0.4); /* Matching glow effect */
-transition: all 0.3s ease;
-display: block; /* Center the button */
-font-size: 26px;
-text-transform: uppercase;
-font-weight: bold;
+  background-color: #7f00ff; /* A different color for the copy button */
+  color: #ffffff;
+  padding: 10px 20px;
+  margin: 10px auto;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0px 4px 6px rgba(74, 144, 226, 0.4); /* Matching glow effect */
+  transition: all 0.3s ease;
+  display: block; /* Center the button */
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 #tweetButton:hover {
-background-color: #ff49db; /* Slightly darker pink on hover */
-box-shadow: 0px 0px 15px rgba(255, 73, 219, 0.8); /* Increased glow effect on hover */
-cursor: url('foundercrying.png'), auto;
-
+  background-color: #ff49db; /* Slightly darker pink on hover */
+  box-shadow: 0px 0px 15px rgba(255, 73, 219, 0.8); /* Increased glow effect on hover */
+  cursor: url("foundercrying.png"), auto;
 }
 
-#controlButtons, #messageDisplay, #instructionText {
-font-family: 'Orbitron', sans-serif;
-width: 100%; /* Ensure full width within flex container */
-display: flex;
-flex-direction: column;
-align-items: center;
+#controlButtons,
+#messageDisplay,
+#instructionText {
+  font-family: "Orbitron", sans-serif;
+  width: 100%; /* Ensure full width within flex container */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#selectionButtons, #controlButtons {
-justify-content: center;
+#selectionButtons,
+#controlButtons {
+  justify-content: center;
 }
 main {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center; /* Center content horizontally */
-    margin-top: 40px; /* Top margin, adjust as needed */
-    margin-bottom: 60px; /* Bottom margin, adjust to footer's height */
-    overflow: auto; /* Allows scrolling if the content is taller than the screen */
-    
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center content horizontally */
+  margin-top: 40px; /* Top margin, adjust as needed */
+  margin-bottom: 60px; /* Bottom margin, adjust to footer's height */
+  overflow: auto; /* Allows scrolling if the content is taller than the screen */
 }
 footer {
-    font-family: 'Roboto', sans-serif; /* Roboto font for a modern look */
+  font-family: "Roboto", sans-serif; /* Roboto font for a modern look */
 
-    width: 100%;
-    padding: 10px;
-    text-align: right;
-    color: #ffffff;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    background-color: #0f0f2f;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+  width: 100%;
+  padding: 10px;
+  text-align: right;
+  color: #ffffff;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  background-color: #0f0f2f;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 
 .footer-logo {
-    height: 30px; /* Adjust the size of your logo */
-    margin: 0 0px;
-    padding-right: 50px;
-
+  height: 30px; /* Adjust the size of your logo */
+  margin: 0 0px;
+  padding-right: 50px;
 }
 
 #backButton {
-    background-color: #0f0f2fb3; /* Vaporwave pink */
-color: #ffffff; /* White text */
-padding: 10px 20px;
-margin: 10px auto;
-margin-top: 20px;
-border: none;
-border-radius: 30px;
-box-shadow: 0px 4px 6px rgba(74, 144, 226, 0.4);
-transition: all 0.3s ease;
-display: block;
-font-size: 18px;
-text-transform: uppercase;
-font-weight: bold;
+  background-color: #0f0f2fb3; /* Vaporwave pink */
+  color: #ffffff; /* White text */
+  padding: 10px 20px;
+  margin: 10px auto;
+  margin-top: 20px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0px 4px 6px rgba(74, 144, 226, 0.4);
+  transition: all 0.3s ease;
+  display: block;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 #backButton:hover {
-background-color: #ff49db; /* Slightly darker pink on hover */
-box-shadow: 0px 0px 15px rgba(255, 73, 219, 0.8); /* Increased glow effect on hover */
-cursor: url('foundercrying.png'), auto;
-
+  background-color: #ff49db; /* Slightly darker pink on hover */
+  box-shadow: 0px 0px 15px rgba(255, 73, 219, 0.8); /* Increased glow effect on hover */
+  cursor: url("foundercrying.png"), auto;
 }
 #instructionText {
-color: #ffffff; /* White color for better visibility */
-    font-family: 'Orbitron', sans-serif;
-background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
-padding: 10px;
-border-radius: 10px;
-font-size: 14px;
-text-align: center;
-width: 95%;
-max-width: auto;
-margin: 1px auto; /* Centering the text block */
-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Adding a subtle shadow for depth */
-margin-bottom: 15px;
+  color: #ffffff; /* White color for better visibility */
+  font-family: "Orbitron", sans-serif;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  text-align: center;
+  width: 95%;
+  max-width: auto;
+  margin: 1px auto; /* Centering the text block */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Adding a subtle shadow for depth */
+  margin-bottom: 15px;
 }
-.footer-left, .footer-right {
-display: flex;
-align-items: center;
-animation: fadeIn 2s ease-out; /* Fade-in animation */
-
+.footer-left,
+.footer-right {
+  display: flex;
+  align-items: center;
+  animation: fadeIn 2s ease-out; /* Fade-in animation */
 }
 @keyframes fadeIn {
-from {
+  from {
     opacity: 0;
-}
-to {
+  }
+  to {
     opacity: 1;
-}
+  }
 }
 .footer-right .social-icon:last-child {
-margin-right: 20px; /* Adds margin to the right of the last social icon */
+  margin-right: 20px; /* Adds margin to the right of the last social icon */
 }
 .footer-right {
-display: flex;
-align-items: center;
-justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 .social-icon {
-fill: #ffffff; /* Sets the color of the SVG to white */
-height: 30px; /* Adjust the size as needed */
-margin: 0 10px;
-animation: rotateIcon 60s linear infinite; /* New rotation animation */
-
+  fill: #ffffff; /* Sets the color of the SVG to white */
+  height: 30px; /* Adjust the size as needed */
+  margin: 0 10px;
+  animation: rotateIcon 60s linear infinite; /* New rotation animation */
 }
 @keyframes rotateIcon {
-from {
+  from {
     transform: rotate(0deg);
-}
-to {
+  }
+  to {
     transform: rotate(360deg);
-}
+  }
 }
 @keyframes glowingBorder {
-0% { box-shadow: 0 0 10px #ff77e9, inset 0 0 10px #ff77e9; }
-25% { box-shadow: 0 0 10px #ff77e9, inset 10px 0 10px #ff77e9; }
-50% { box-shadow: 0 0 10px #ff77e9, inset 10px 10px 10px #ff77e9; }
-75% { box-shadow: 0 0 10px #ff77e9, inset 0 10px 10px #ff77e9; }
-100% { box-shadow: 0 0 10px #ff77e9, inset 0 0 10px #ff77e9; }
+  0% {
+    box-shadow: 0 0 10px #ff77e9, inset 0 0 10px #ff77e9;
+  }
+  25% {
+    box-shadow: 0 0 10px #ff77e9, inset 10px 0 10px #ff77e9;
+  }
+  50% {
+    box-shadow: 0 0 10px #ff77e9, inset 10px 10px 10px #ff77e9;
+  }
+  75% {
+    box-shadow: 0 0 10px #ff77e9, inset 0 10px 10px #ff77e9;
+  }
+  100% {
+    box-shadow: 0 0 10px #ff77e9, inset 0 0 10px #ff77e9;
+  }
 }
 #messageDisplay {
-/* ... existing styles ... */
-animation: glowingBorder 3s linear infinite;
+  /* ... existing styles ... */
+  animation: glowingBorder 3s linear infinite;
 }
 #siteLogo {
-display: block;
-margin: 0 auto; /* Centers the logo */
-max-width: 220px; /* Adjust the size as needed */
-height: auto; /* Maintain aspect ratio */
-padding-top: 50px; /* Space from the top, adjust as needed */
+  display: block;
+  margin: 0 auto; /* Centers the logo */
+  max-width: 220px; /* Adjust the size as needed */
+  height: auto; /* Maintain aspect ratio */
+  padding-top: 50px; /* Space from the top, adjust as needed */
 }
 
-
 .footer-text {
-position: absolute;
-width: 100%;
-MARGIN-LEFT: 10PX;
-text-align: left;
-left: 1px;
-font-size: 12px;
-bottom: 50%; /* Adjust as needed */
-transform: translateY(50%); /* Adjust as needed */
-/* Additional styling for the text */
+  position: absolute;
+  width: 100%;
+  margin-left: 10px;
+  text-align: left;
+  left: 1px;
+  font-size: 12px;
+  bottom: 50%; /* Adjust as needed */
+  transform: translateY(50%); /* Adjust as needed */
+  /* Additional styling for the text */
 }
 
 #randomizeButton {
-background-color: #7f00ff; /* Vivid blue color */
-color: #ffffff; /* White text */
-padding: 15px 30px; /* Generous padding for a larger button */
-margin: 10px;
-border: none;
-border-radius: 10px; /* Rounded corners */
-cursor: pointer;
-font-size: 18px; /* Larger font size for impact */
-font-weight: bold;
-text-transform: uppercase;
-box-shadow: 0 0 20px #1e90ff; /* Glowing effect */
-transition: all 0.3s ease;
-position: relative;
-overflow: hidden; /* Required for the animation effect */
+  background-color: #7f00ff; /* Vivid blue color */
+  color: #ffffff; /* White text */
+  padding: 15px 30px; /* Generous padding for a larger button */
+  margin: 10px;
+  border: none;
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 18px; /* Larger font size for impact */
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px #1e90ff; /* Glowing effect */
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden; /* Required for the animation effect */
 }
 
 #randomizeButton::before {
-content: '';
-position: absolute;
-top: 50%;
-left: 50%;
-width: 300%;
-height: 300%;
-background-color: #ff49db;
-transition: all 0.3s ease;
-border-radius: 50%;
-z-index: -1;
-transform: translate(-50%, -50%) scale(0);
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: #ff49db;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%) scale(0);
 }
-
-
 
 @keyframes buttonGlow {
-0% {
+  0% {
     box-shadow: 0px 4px 6px rgba(255, 119, 233, 0.4);
-}
-100% {
+  }
+  100% {
     box-shadow: 0px 4px 10px rgba(255, 73, 219, 0.8);
+  }
 }
-}
-
 
 #randomizeButton:hover {
-background-color: #ff49db; /* Slightly darker pink on hover */
-box-shadow: 0px 0px 15px rgba(255, 73, 219, 0.8); /* Increased glow effect on hover */
-transform: translateY(-2px);
-cursor: url('foundercrying.png'), auto;
-
+  background-color: #ff49db; /* Slightly darker pink on hover */
+  box-shadow: 0px 0px 15px rgba(255, 73, 219, 0.8); /* Increased glow effect on hover */
+  transform: translateY(-2px);
+  cursor: url("foundercrying.png"), auto;
 }
 
 #randomizeButton:disabled {
-background-color: #5e5e5e;
-color: #a3a3a3;
-cursor: default;
-transform: none;
-box-shadow: none;
+  background-color: #5e5e5e;
+  color: #a3a3a3;
+  cursor: default;
+  transform: none;
+  box-shadow: none;
 }
 
 #tweetButton i {
-margin-right: 5px; /* Spacing between icon and text */
-vertical-align: middle; /* Align icon with text */
+  margin-right: 5px; /* Spacing between icon and text */
+  vertical-align: middle; /* Align icon with text */
 }
 
 #tweetButton img {
-height: 20px; /* Adjust as needed */
-width: 20px; /* Adjust as needed */
-margin-right: 5px; /* Spacing between icon and text */
-vertical-align: middle; /* Align icon with text */
+  height: 20px; /* Adjust as needed */
+  width: 20px; /* Adjust as needed */
+  margin-right: 5px; /* Spacing between icon and text */
+  vertical-align: middle; /* Align icon with text */
 }
 
 @media (max-height: 1080px) {
-body {
+  body {
     /* Adjust styles for 1080p screens here */
     background-size: cover; /* Adjust background size for better fit */
     font-size: 12px; /* Decrease font size for better readability */
     /* Add any other necessary style adjustments */
-}
-button {
-padding: 5px 10px; /* Smaller padding */
-margin: 5px; /* Smaller margin */
-border-radius: 5px; /* Smoother border radius */
-font-size: 12px; /* Smaller font size */
-}
-#tweetButton {
-font-size: 20px;
-}
-#randomizeButton {
+  }
+  button {
+    padding: 5px 10px; /* Smaller padding */
+    margin: 5px; /* Smaller margin */
+    border-radius: 5px; /* Smoother border radius */
+    font-size: 12px; /* Smaller font size */
+  }
+  #tweetButton {
+    font-size: 20px;
+  }
+  #randomizeButton {
+    padding: 5px 10px; /* Generous padding for a larger button */
+    margin: 5px;
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    font-size: 14px; /* Larger font size for impact */
+  }
 
-padding: 5px 10px; /* Generous padding for a larger button */
-margin: 5px;
-border: none;
-border-radius: 10px; /* Rounded corners */
-font-size: 14px; /* Larger font size for impact */
-}
-
-#randomizeButton::before {
-top: 50%;
-left: 50%;
-width: 200%;
-height: 200%;
-}
-#siteLogo {
-display: block;
-margin: 0 auto; /* Centers the logo */
-max-width: 140px; /* Adjust the size as needed */
-height: auto; /* Maintain aspect ratio */
-padding-top: 25px; /* Space from the top, adjust as needed */
-}
-#instructionText {
+  #randomizeButton::before {
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+  }
+  #siteLogo {
+    display: block;
+    margin: 0 auto; /* Centers the logo */
+    max-width: 140px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+    padding-top: 25px; /* Space from the top, adjust as needed */
+  }
+  #instructionText {
     margin-bottom: 15px; /* Bottom margin, adjust to footer's height */
     font-size: 12px;
-}
-#nextButton {
-font-size: 16px;
-
-}
-#controlButtons {
-font-size: 20px;
-
-}
-#startButton
-{
-font-size: 20px;
-}
-#tweetButton {
-margin-top: 20px;
-width: 150px; /* Adjust width as needed */
+  }
+  #nextButton {
+    font-size: 16px;
+  }
+  #controlButtons {
+    font-size: 20px;
+  }
+  #startButton {
+    font-size: 20px;
+  }
+  #tweetButton {
+    margin-top: 20px;
+    width: 150px; /* Adjust width as needed */
     font-size: 14px;
-}
-#finalMessage {
-font-family: 'Orbitron', sans-serif;
+  }
+  #finalMessage {
+    font-family: "Orbitron", sans-serif;
     font-weight: bold;
-font-size: 14px; /* Smaller font size */
-}
-#finalMessage p {
-margin-bottom: 16px; /* Increase space below each paragraph */
-line-height: 1; /* Optional: Adjust line height for better readability */
-/* Add other styles if needed */
-}
-#messageDisplay {
-padding: 15px;
-margin: 5px auto;
-width: 90%;
-max-width: 1000px;
-line-height: 1.75; /* Optional: Adjust line height for better readability */
-}
-#backButton {
-margin-top: 5px;
-border: none;
-font-size: 12px;
-text-transform: uppercase;
-font-weight: bold;
-}
+    font-size: 14px; /* Smaller font size */
+  }
+  #finalMessage p {
+    margin-bottom: 16px; /* Increase space below each paragraph */
+    line-height: 1; /* Optional: Adjust line height for better readability */
+    /* Add other styles if needed */
+  }
+  #messageDisplay {
+    padding: 15px;
+    margin: 5px auto;
+    width: 90%;
+    max-width: 1000px;
+    line-height: 1.75; /* Optional: Adjust line height for better readability */
+  }
+  #backButton {
+    margin-top: 5px;
+    border: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
 }
 
 @media (max-width: 200px) {
-.footer-right .social-icon:last-child {
-margin-right: 5px; /* Adds margin to the right of the last social icon */
-}
-.footer-right {
-display: flex;
-align-items: center;
-justify-content: flex-end;
-}
-.social-icon {
-fill: #ffffff; /* Sets the color of the SVG to white */
-height: 10px; /* Adjust the size as needed */
-margin: 0 5px;
-}
-
+  .footer-right .social-icon:last-child {
+    margin-right: 5px; /* Adds margin to the right of the last social icon */
+  }
+  .footer-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .social-icon {
+    fill: #ffffff; /* Sets the color of the SVG to white */
+    height: 10px; /* Adjust the size as needed */
+    margin: 0 5px;
+  }
 }
